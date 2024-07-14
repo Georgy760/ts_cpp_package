@@ -10,6 +10,6 @@
     },
     "outDir": "build"
   },
-  "include": ["src/**/*", "binding.ts"],
+  "include": ["src/**/*", "binding.ts", "typescriptFunctions.ts"],
   "exclude": ["node_modules"]
 }

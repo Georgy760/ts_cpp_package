@@ -19,7 +19,22 @@ target_link_libraries(hello ${CMAKE_JS_LIB})
 
 # Ensure the output file has the .node extension and no lib prefix
 set_target_properties(hello PROPERTIES
-    SUFFIX ".node"
     PREFIX ""
+    SUFFIX ".node"
     OUTPUT_NAME "hello"
+)
+
+# Create another library target for cppWrapper
+add_library(cppWrapper SHARED
+    src/cpp_wrapper.cpp
+)
+
+# Link Node.js libraries
+target_link_libraries(cppWrapper ${CMAKE_JS_LIB})
+
+# Ensure the output file has the .node extension and no lib prefix
+set_target_properties(cppWrapper PROPERTIES
+    PREFIX ""
+    SUFFIX ".node"
+    OUTPUT_NAME "cppWrapper"
 )
