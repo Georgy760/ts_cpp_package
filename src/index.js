@@ -23,10 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = __importStar(require("path"));
-const addonPath = path.join(__dirname, '../build/Release/addon');
-const addon = require(addonPath);
-function callback(message) {
-    console.log(message);
-}
-addon(callback);
+// Importing the native module using the name specified in the type declaration
+const hello = __importStar(require("hello"));
+// Use the function or methods exported from the module
+console.log(hello.hello());

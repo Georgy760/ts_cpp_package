@@ -1,17 +1,17 @@
+# Install project dependencies
+npm install
+
+# Clean old build artifacts
+cmake-js clean
+
+# Configure the build
+cmake-js configure
+
+# Build the C++ addon
+cmake-js build
+
+# Compile TypeScript files
 npm run build
+
+# Run the Node.js application
 npm start
-
-nano src/addon.d.ts
-npm run build
-
-nano src/index.ts
-nano tsconfig.json
-npm install --save-dev typescript @types/node
-
-npx node-gyp build
-npx node-gyp configure
-nano src/addon.cpp
-nano binding.gyp
-npm install node-addon-api
-
-npm init -y

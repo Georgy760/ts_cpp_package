@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "module": "commonjs",
-    "strict": true,
+    "target": "es6",
+    "types": ["node"],
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "baseUrl": ".",
+    "paths": {
+      "hello": ["build/Release/hello.node"]
+    },
+    "outDir": "build"
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*", "binding.ts"],
+  "exclude": ["node_modules"]
 }
